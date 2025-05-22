@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GoalLineAssist - VAR Replay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <h1>VideoAssistantReferee</h1>
+  </header>
+
+  <main class="container">
+    <!-- Grid: Live Feed + Replay -->
+    <div class="grid">
+      <!-- Live Camera Feed -->
+      <section class="card">
+        <h2>Live Camera Feed</h2>
+        <div class="camera-feed" id="camera-feed">
+          <video id="video" autoplay muted playsinline></video>
+        </div>
+      </section>
+
+      <!-- Replay -->
+      <section class="card">
+        <h2>Replay</h2>
+        <video id="replayVideo" controls style="width: 100%; display: none;"></video>
+        <div class="buttons">
+  <button onclick="playReplay(0.1)">🔁 Replay at 0.1x</button>
+  <button onclick="playReplay(0.25)">🔁 Replay at 0.25x</button>
+  <button onclick="playReplay(0.5)">🔁 Replay at 0.5x</button>
+  <button onclick="playReplay(0.75)">🔁 Replay at 0.75x</button>
+        </div>
+    </section>
+    </div>
+
+    <!-- Controls Section -->
+    <section class="card">
+      <h2>Controls</h2>
+      <div class="buttons">
+        <button onclick="startCamera()">📷 Start Camera</button>
+        <button onclick="switchCamera()">🔄 Switch to Back Camera</button>
+        <button onclick="startRecording()">⏺️ Start Recording</button>
+        <button onclick="stopRecording()">⏹️ Stop Recording</button>
+      </div>
+    </section>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
